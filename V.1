@@ -1,0 +1,334 @@
+local WindowTable = {} -- We will be inserting Main Function in here
+
+function WindowTable:CreateWindow()
+
+local SynapseHub = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local MovingFrame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local SideBar = Instance.new("Frame")
+local allTabs = Instance.new("ScrollingFrame")
+local tabButton = Instance.new("TextButton")
+local UIListLayout = Instance.new("UIListLayout")
+local allPages = Instance.new("Frame")
+local newPage = Instance.new("ScrollingFrame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local UIPadding = Instance.new("UIPadding")
+local TextButton = Instance.new("TextButton")
+local toggleButton = Instance.new("TextButton")
+local Frame = Instance.new("Frame")
+ 
+SynapseHub.Name = "Synapse Hub"
+SynapseHub.Parent = game.CoreGui
+SynapseHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainFrame.Name = "Main Frame"
+MainFrame.Parent = SynapseHub
+MainFrame.BackgroundColor3 = Color3.new(0.129412, 0.129412, 0.129412)
+MainFrame.BorderColor3 = Color3.new(0.129412, 0.129412, 0.129412)
+MainFrame.Position = UDim2.new(0.143965513, 0, 0.424390256, 0)
+MainFrame.Size = UDim2.new(0, 851, 0, 407)
+
+MovingFrame.Name = "Moving Frame"
+MovingFrame.Parent = MainFrame
+MovingFrame.BackgroundColor3 = Color3.new(0.101961, 0.101961, 0.101961)
+MovingFrame.BorderColor3 = Color3.new(0.101961, 0.101961, 0.101961)
+MovingFrame.Size = UDim2.new(0, 851, 0, 48)
+
+TextLabel.Parent = MovingFrame
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.129259691, 0, 0.1875, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "V3"
+TextLabel.TextColor3 = Color3.new(0, 1, 0.85098)
+TextLabel.TextSize = 26
+
+TextLabel_2.Parent = MovingFrame
+TextLabel_2.BackgroundColor3 = Color3.new(0.00392157, 0.831373, 0.956863)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.BorderSizePixel = 10
+TextLabel_2.Position = UDim2.new(0.139835477, 0, -0.328521699, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_2.Font = Enum.Font.SourceSansBold
+TextLabel_2.Text = "HUB"
+TextLabel_2.TextColor3 = Color3.new(0, 1, 0.85098)
+TextLabel_2.TextSize = 28
+
+TextLabel_3.Parent = MovingFrame
+TextLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_3.BackgroundTransparency = 1
+TextLabel_3.Position = UDim2.new(0.381903648, 0, -0.166666672, 0)
+TextLabel_3.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Ui Creator|rolly#6886"
+TextLabel_3.TextColor3 = Color3.new(1, 0.917647, 0)
+TextLabel_3.TextSize = 14
+TextLabel_3.TextTransparency = 0.7699999809265137
+
+TextLabel_4.Parent = MovingFrame
+TextLabel_4.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_4.BackgroundTransparency = 1
+TextLabel_4.Size = UDim2.new(0, 182, 0, 48)
+TextLabel_4.Font = Enum.Font.Ubuntu
+TextLabel_4.Text = "Synapse"
+TextLabel_4.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_4.TextSize = 50
+
+SideBar.Name = "SideBar"
+SideBar.Parent = MainFrame
+SideBar.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+SideBar.BorderColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+SideBar.Position = UDim2.new(0, 0, 0.117936119, 0)
+SideBar.Size = UDim2.new(0, 182, 0, 359)
+
+allTabs.Name = "allTabs"
+allTabs.Parent = SideBar
+allTabs.Active = true
+allTabs.BackgroundColor3 = Color3.new(1, 1, 1)
+allTabs.BackgroundTransparency = 1
+allTabs.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+allTabs.Size = UDim2.new(0, 182, 0, 359)
+allTabs.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+tabButton.Name = "tabButton"
+tabButton.Parent = allTabs
+tabButton.BackgroundColor3 = Color3.new(0.192157, 0.192157, 0.192157)
+tabButton.BorderColor3 = Color3.new(1, 1, 0.0392157)
+tabButton.Position = UDim2.new(0.068681322, 0, 0, 0)
+tabButton.Size = UDim2.new(0, 160, 0, 50)
+tabButton.Font = Enum.Font.Oswald
+tabButton.TextColor3 = Color3.new(1, 1, 1)
+tabButton.TextSize = 23
+
+UIListLayout.Parent = allTabs
+UIListLayout.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 2)
+
+allPages.Name = "allPages"
+allPages.Parent = MainFrame
+allPages.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+allPages.BorderColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+allPages.Position = UDim2.new(0.229142189, 0, 0.144963145, 0)
+allPages.Size = UDim2.new(0, 650, 0, 340)
+
+newPage.Name = "newPage"
+newPage.Parent = allPages
+newPage.Active = true
+newPage.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+newPage.BorderColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+newPage.Size = UDim2.new(0, 650, 0, 340)
+newPage.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+UIListLayout_2.Parent = newPage
+UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0, 5)
+
+UIPadding.Parent = newPage
+
+TextButton.Parent = newPage
+TextButton.BackgroundColor3 = Color3.new(0.14902, 0.14902, 0.14902)
+TextButton.Position = UDim2.new(0.084615387, 0, 0, 0)
+TextButton.Size = UDim2.new(0, 595, 0, 50)
+TextButton.Font = Enum.Font.SpecialElite
+TextButton.TextColor3 = Color3.new(1, 0.992157, 0.968628)
+TextButton.TextSize = 14
+
+toggleButton.Name = "toggleButton"
+toggleButton.Parent = newPage
+toggleButton.BackgroundColor3 = Color3.new(0.14902, 0.14902, 0.14902)
+toggleButton.Position = UDim2.new(-0.0199999996, 0, 0.161764711, 0)
+toggleButton.Size = UDim2.new(0, 596, 0, 50)
+toggleButton.Font = Enum.Font.SpecialElite
+toggleButton.TextColor3 = Color3.new(1, 0.992157, 0.968628)
+toggleButton.TextSize = 14
+
+Frame.Parent = toggleButton
+Frame.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+Frame.Position = UDim2.new(0.0536912754, 0, 0.0799999982, 0)
+Frame.Size = UDim2.new(0, 41, 0, 41)
+	
+	local pagesFolder = Instance.new("Folder")
+
+	pagesFolder.Name = "pagesFolder"
+	pagesFolder.Parent = allPages
+
+	local TabHandler = {}
+
+	function TabHandler:CreateTab(tabname)
+		tabname = tabname or "New Tab"
+		local tabButton = Instance.new("TextButton")
+		local tabCorner = Instance.new("UICorner")
+		local newPage = Instance.new("ScrollingFrame") 
+		local elementsListing = Instance.new("UIListLayout") 
+
+		local elementsPadding = Instance.new("UIPadding")
+
+		elementsPadding.Name = "elementsPadding"
+		elementsPadding.Parent = newPage
+		elementsPadding.PaddingRight = UDim.new(0, 5)
+		elementsPadding.PaddingTop = UDim.new(0, 5)
+
+		tabButton.Name = "tabButton"
+		tabButton.Parent = allTabs
+		tabButton.BackgroundColor3 = Color3.fromRGB(115, 49, 37)
+		tabButton.Size = UDim2.new(0, 99, 0, 25)
+		tabButton.Font = Enum.Font.Gotham
+		tabButton.Text = tabname -- Displays our custom text
+		tabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+		tabButton.TextSize = 14.000
+		tabButton.AutoButtonColor = false   
+		tabButton.MouseButton1Click:Connect(function()
+			for i,v in next, pagesFolder:GetChildren() do -- We get all the pages that we added
+				v.Visible = false   -- then we make them invisible 
+			end 
+			newPage.Visible = true  -- We make current page visible but not others
+
+			--Animations Below  -- Optional
+			for i,v in next, allTabs:GetChildren() do   -- We get all the elements inside the frame
+				if v:IsA("TextButton") then -- We can't animate UIListLayout, so we check if its a TextButton
+					game.TweenService:Create(v, TweenInfo.new(0.2, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+						BackgroundColor3 = Color3.fromRGB(115, 49, 37) -- We animate other Tab Buttons and making the current one seem Checked
+					}):Play()
+				end
+			end
+			game.TweenService:Create(tabButton, TweenInfo.new(0.2, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+				BackgroundColor3 = Color3.fromRGB(255, 109, 83) -- We animate other Tab Buttons and making the current one seem Checked
+			}):Play()
+		end)
+
+		tabCorner.CornerRadius = UDim.new(0, 3)
+		tabCorner.Name = "sideCorner"
+		tabCorner.Parent = tabButton
+
+		newPage.Name = "newPage"
+		newPage.Parent = pagesFolder
+		newPage.Active = true
+		newPage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		newPage.BackgroundTransparency = 1.000
+		newPage.Size = UDim2.new(1, 0, 1, 0)
+		newPage.ScrollBarThickness = 5
+		newPage.Visible = false
+		newPage.ZIndex = 99
+
+		elementsListing.Name = "elementsListing"
+		elementsListing.Parent = newPage
+		elementsListing.HorizontalAlignment = Enum.HorizontalAlignment.Center
+		elementsListing.SortOrder = Enum.SortOrder.LayoutOrder
+		elementsListing.Padding = UDim.new(0, 5)
+
+		local ElementHandler = {}
+
+		function ElementHandler:CreateButton(btnText, callback)
+			btnText = btnText or "Text Button"
+			callback = callback or function() end   
+
+			local TextButton = Instance.new("TextButton")
+			local buttonCorner = Instance.new("UICorner")
+
+			TextButton.Parent = newPage
+			TextButton.BackgroundColor3 = Color3.fromRGB(44, 48, 53)
+			TextButton.Position = UDim2.new(0.0245098043, 0, 0, 0)
+			TextButton.Size = UDim2.new(0, 291, 0, 32)
+			TextButton.AutoButtonColor = false
+			TextButton.Font = Enum.Font.Gotham
+			TextButton.Text = btnText
+			TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+			TextButton.TextSize = 14.000
+			TextButton.ZIndex = 1
+			TextButton.MouseButton1Click:Connect(function()
+				callback()
+			end)
+
+			buttonCorner.CornerRadius = UDim.new(0, 3)
+			buttonCorner.Name = "buttonCorner"
+			buttonCorner.Parent = TextButton
+		end
+
+		function ElementHandler:CreateToggle(togInfo, callback)
+			togInfo = togInfo or "Toggle"
+			callback = callback or function() end   
+
+			local toggleButton = Instance.new("TextButton")
+			local toggleButtonCover = Instance.new("UICorner")
+			local toggle = Instance.new("Frame")
+			local toggleCorner = Instance.new("UICorner")
+			local toggleInfo = Instance.new("TextLabel")
+
+			toggleButton.Name = "toggleButton"
+			toggleButton.Parent = newPage
+			toggleButton.BackgroundColor3 = Color3.fromRGB(44, 48, 53)
+			toggleButton.Position = UDim2.new(0.0245098043, 0, 0, 0)
+			toggleButton.Size = UDim2.new(0, 291, 0, 32)
+			toggleButton.AutoButtonColor = false
+			toggleButton.Font = Enum.Font.Gotham
+			toggleButton.Text = ""
+			toggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+			toggleButton.TextSize = 14.000
+
+			toggleButtonCover.CornerRadius = UDim.new(0, 3)
+			toggleButtonCover.Name = "toggleButtonCover"
+			toggleButtonCover.Parent = toggleButton
+
+			toggle.Name = "toggle"
+			toggle.Parent = toggleButton
+			toggle.BackgroundColor3 = Color3.fromRGB(61, 67, 74)
+			toggle.Position = UDim2.new(0.0240549836, 0, 0.15625, 0)
+			toggle.Size = UDim2.new(0, 22, 0, 22)
+
+			toggleCorner.CornerRadius = UDim.new(0, 888)
+			toggleCorner.Name = "toggleCorner"
+			toggleCorner.Parent = toggle
+
+			toggleInfo.Name = "toggleInfo"
+			toggleInfo.Parent = toggleButton
+			toggleInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			toggleInfo.BackgroundTransparency = 1.000
+			toggleInfo.Position = UDim2.new(0.130584195, 0, 0, 0)
+			toggleInfo.Size = UDim2.new(0, 230, 0, 32)
+			toggleInfo.Font = Enum.Font.Gotham
+			toggleInfo.Text = togInfo --- We set our custom text here
+			toggleInfo.TextColor3 = Color3.fromRGB(255, 255, 255)
+			toggleInfo.TextSize = 14.000
+			toggleInfo.TextXAlignment = Enum.TextXAlignment.Left
+
+			local tog = false
+
+			toggleButton.MouseButton1Click:Connect(function()
+				tog = not tog
+				callback(tog) -- Callbacks whenever we toggle
+				if tog then 
+					game.TweenService:Create(toggle, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+						BackgroundColor3 = Color3.fromRGB(255, 109, 83)
+					}):Play()
+					--- We put our animation here when the toggle is on
+				else
+					game.TweenService:Create(toggle, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+						BackgroundColor3 = Color3.fromRGB(61, 67, 74)
+					}):Play()
+					---We Put our animation here when the toggle is off
+				end
+			end)
+		end
+
+		return ElementHandler
+	end
+	return TabHandler
+end
+local win = WindowTable:CreateWindow()
+local tab = win:CreateTab("Hello Guys")
+
+tab:CreateButton("Print", function()
+	print("Hello V3rm")
+end)
+tab:CreateToggle("Sex", function(sssss)
+	print(sssss)
+end)
+return WindowTable
